@@ -57,43 +57,6 @@ public:
             exit(-1);
         }
     }
-    void read_input()
-    {
-        int N, M, P;
-        std::cin >> N >> M >> P;
-        std::vector<std::string> cards_held;
-        for (int i = 0; i < N; i++)
-        {
-            std::string card;
-            std::cin >> card;
-            cards_held.push_back(card);
-        }
-        std::set<std::string> desired_cards;
-        for (int i = 0; i < M; i++)
-        {
-            std::string card;
-            std::cin >> card;
-            desired_cards.insert(card);
-        }
-        std::vector<std::vector<std::string>> packages;
-        for (int i = 0; i < P; i++)
-        {
-            int package_size;
-            std::cin >> package_size;
-            std::vector<std::string> package_cards;
-            for (int j = 0; j < package_size; j++)
-            {
-                std::string card;
-                std::cin >> card;
-                package_cards.push_back(card);
-            }
-            packages.push_back(package_cards);
-        }
-        // save the input data in some variable for further processing: packages, cards_held, desired_cards
-        vector<vector<string>> packages;
-        vector<string> cards_held;
-        set<string> desired_cards;
-    }
 };
 
 #endif // TASK_H_
